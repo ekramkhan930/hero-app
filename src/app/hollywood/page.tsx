@@ -20,7 +20,7 @@ import { MovieCard } from '@/components/ui/MovieCard';
 export default function HollywoodPage() {
   const [celebrities, setCelebrities] = useState<Celebrity[]>([]);
   const [movies, setMovies] = useState<Movie[]>([]);
-  const [roleFilter, setRoleFilter] = useState<'All' | 'Hero' | 'Heroine'>('All');
+  const [roleFilter, setRoleFilter] = useState<'All' | 'Actor' | 'Actress'>('All');
 
   const loadData = async () => {
     const [allCelebs, allMovs] = await Promise.all([
@@ -37,14 +37,14 @@ export default function HollywoodPage() {
     return () => window.removeEventListener('cinestars_data_updated', loadData);
   }, []);
 
-  const heroes = celebrities.filter((c) => c.role === 'Hero');
-  const heroines = celebrities.filter((c) => c.role === 'Heroine');
+  const actors = celebrities.filter((c) => c.role === 'Actor');
+  const actresses = celebrities.filter((c) => c.role === 'Actress');
 
   const filteredCelebrities =
-    roleFilter === 'Hero'
-      ? heroes
-      : roleFilter === 'Heroine'
-      ? heroines
+    roleFilter === 'Actor'
+      ? actors
+      : roleFilter === 'Actress'
+      ? actresses
       : celebrities;
 
   return (
@@ -64,17 +64,17 @@ export default function HollywoodPage() {
           </h1>
 
           <p className="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed mb-8">
-            Explore Hollywood’s elite heroes and heroines, Oscar-winning legends, billion-dollar franchise
-            leads, and visionary actors who define global cinema.
+            Explore Hollywood’s elite actors and actresses, Oscar-winning legends, billion-dollar franchise
+            leads, and visionary performers who define global cinema.
           </p>
 
           {/* Quick Metrics */}
           <div className="flex flex-wrap justify-center gap-4 text-xs">
             <div className="glass-panel px-4 py-2.5 rounded-xl border border-indigo-500/20 text-slate-300">
-              <span className="font-bold text-indigo-400 text-sm">{heroes.length}</span> Hollywood Heroes
+              <span className="font-bold text-indigo-400 text-sm">{actors.length}</span> Hollywood Actors
             </div>
             <div className="glass-panel px-4 py-2.5 rounded-xl border border-indigo-500/20 text-slate-300">
-              <span className="font-bold text-indigo-400 text-sm">{heroines.length}</span> Hollywood Heroines
+              <span className="font-bold text-indigo-400 text-sm">{actresses.length}</span> Hollywood Actresses
             </div>
             <div className="glass-panel px-4 py-2.5 rounded-xl border border-indigo-500/20 text-slate-300">
               <span className="font-bold text-indigo-400 text-sm">{movies.length}</span> Tracked Blockbusters
@@ -91,12 +91,12 @@ export default function HollywoodPage() {
             <div>
               <h2 className="text-2xl sm:text-3xl font-black text-white">Hollywood Stars</h2>
               <p className="text-xs text-slate-400 mt-1">
-                Filter between Hollywood heroes and heroines
+                Filter between Hollywood actors and actresses
               </p>
             </div>
 
             <div className="flex items-center p-1 bg-slate-900 rounded-xl border border-slate-800 text-xs font-medium self-start sm:self-auto">
-              {(['All', 'Hero', 'Heroine'] as const).map((r) => (
+              {(['All', 'Actor', 'Actress'] as const).map((r) => (
                 <button
                   key={r}
                   onClick={() => setRoleFilter(r)}
@@ -106,7 +106,7 @@ export default function HollywoodPage() {
                       : 'text-slate-400 hover:text-white'
                   }`}
                 >
-                  {r === 'All' ? 'All Stars' : `${r}es`}
+                  {r === 'All' ? 'All Stars' : r === 'Actor' ? 'Actors' : 'Actresses'}
                 </button>
               ))}
             </div>

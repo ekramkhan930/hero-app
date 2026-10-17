@@ -82,7 +82,7 @@ export default function HomePage() {
           {/* Subtitle */}
           <p className="text-base sm:text-xl text-slate-300/90 max-w-3xl mx-auto leading-relaxed mb-10">
             Immerse yourself in comprehensive biographies, complete movie lists, box office verdicts,
-            prestigious awards, and personal details of cinema’s most revered heroes and heroines.
+            prestigious awards, and personal details of cinema’s most revered actors and actresses.
           </p>
 
           {/* Action Buttons */}
@@ -170,14 +170,14 @@ export default function HomePage() {
               </h2>
             </div>
             <p className="text-sm text-slate-400 max-w-md mt-2 md:mt-0">
-              Direct access to Bollywood Heroes & Heroines and Hollywood Heroes & Heroines with specialized filmographies and achievements.
+              Direct access to Bollywood Actors & Actresses and Hollywood Actors & Actresses with specialized filmographies and achievements.
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Bollywood Heroes */}
+            {/* Bollywood Actors */}
             <Link
-              href="/celebrities?industry=Bollywood&role=Hero"
+              href="/celebrities?industry=Bollywood&role=Actor"
               className="group relative rounded-2xl p-6 glass-panel-gold border border-amber-500/20 hover:border-amber-500/60 transition-all duration-300 hover:-translate-y-1 overflow-hidden"
             >
               <div className="absolute -right-6 -bottom-6 w-28 h-28 bg-amber-500/10 rounded-full blur-2xl group-hover:scale-150 transition-transform" />
@@ -185,20 +185,20 @@ export default function HomePage() {
                 <Users className="w-6 h-6" />
               </div>
               <h3 className="text-lg font-bold text-white group-hover:text-amber-400 transition-colors">
-                Bollywood Heroes
+                Bollywood Actors
               </h3>
               <p className="text-xs text-slate-400 mt-2 leading-relaxed">
                 Superstars like Shah Rukh Khan, Aamir Khan, Hrithik Roshan, and Amitabh Bachchan.
               </p>
               <div className="mt-4 flex items-center text-xs font-semibold text-amber-400 gap-1 group-hover:translate-x-1 transition-transform">
-                <span>View {bollywoodStars.filter((c) => c.role === 'Hero').length} Heroes</span>
+                <span>View {bollywoodStars.filter((c) => c.role === 'Actor').length} Actors</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </div>
             </Link>
 
-            {/* Bollywood Heroines */}
+            {/* Bollywood Actresses */}
             <Link
-              href="/celebrities?industry=Bollywood&role=Heroine"
+              href="/celebrities?industry=Bollywood&role=Actress"
               className="group relative rounded-2xl p-6 glass-panel-gold border border-amber-500/20 hover:border-amber-500/60 transition-all duration-300 hover:-translate-y-1 overflow-hidden"
             >
               <div className="absolute -right-6 -bottom-6 w-28 h-28 bg-amber-500/10 rounded-full blur-2xl group-hover:scale-150 transition-transform" />
@@ -206,20 +206,20 @@ export default function HomePage() {
                 <Sparkles className="w-6 h-6" />
               </div>
               <h3 className="text-lg font-bold text-white group-hover:text-amber-400 transition-colors">
-                Bollywood Heroines
+                Bollywood Actresses
               </h3>
               <p className="text-xs text-slate-400 mt-2 leading-relaxed">
                 Queens of cinema like Deepika Padukone, Alia Bhatt, and Priyanka Chopra Jonas.
               </p>
               <div className="mt-4 flex items-center text-xs font-semibold text-amber-400 gap-1 group-hover:translate-x-1 transition-transform">
-                <span>View {bollywoodStars.filter((c) => c.role === 'Heroine').length} Heroines</span>
+                <span>View {bollywoodStars.filter((c) => c.role === 'Actress').length} Actresses</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </div>
             </Link>
 
-            {/* Hollywood Heroes */}
+            {/* Hollywood Actors */}
             <Link
-              href="/celebrities?industry=Hollywood&role=Hero"
+              href="/celebrities?industry=Hollywood&role=Actor"
               className="group relative rounded-2xl p-6 glass-panel-indigo border border-indigo-500/20 hover:border-indigo-500/60 transition-all duration-300 hover:-translate-y-1 overflow-hidden"
             >
               <div className="absolute -right-6 -bottom-6 w-28 h-28 bg-indigo-500/10 rounded-full blur-2xl group-hover:scale-150 transition-transform" />
@@ -227,20 +227,20 @@ export default function HomePage() {
                 <Clapperboard className="w-6 h-6" />
               </div>
               <h3 className="text-lg font-bold text-white group-hover:text-indigo-400 transition-colors">
-                Hollywood Heroes
+                Hollywood Actors
               </h3>
               <p className="text-xs text-slate-400 mt-2 leading-relaxed">
                 Titan actors like Leonardo DiCaprio, Robert Downey Jr., and Tom Cruise.
               </p>
               <div className="mt-4 flex items-center text-xs font-semibold text-indigo-400 gap-1 group-hover:translate-x-1 transition-transform">
-                <span>View {hollywoodStars.filter((c) => c.role === 'Hero').length} Heroes</span>
+                <span>View {hollywoodStars.filter((c) => c.role === 'Actor').length} Actors</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </div>
             </Link>
 
-            {/* Hollywood Heroines */}
+            {/* Hollywood Actresses */}
             <Link
-              href="/celebrities?industry=Hollywood&role=Heroine"
+              href="/celebrities?industry=Hollywood&role=Actress"
               className="group relative rounded-2xl p-6 glass-panel-indigo border border-indigo-500/20 hover:border-indigo-500/60 transition-all duration-300 hover:-translate-y-1 overflow-hidden"
             >
               <div className="absolute -right-6 -bottom-6 w-28 h-28 bg-indigo-500/10 rounded-full blur-2xl group-hover:scale-150 transition-transform" />
@@ -248,13 +248,13 @@ export default function HomePage() {
                 <Trophy className="w-6 h-6" />
               </div>
               <h3 className="text-lg font-bold text-white group-hover:text-indigo-400 transition-colors">
-                Hollywood Heroines
+                Hollywood Actresses
               </h3>
               <p className="text-xs text-slate-400 mt-2 leading-relaxed">
                 Oscar and global trailblazers like Scarlett Johansson, Margot Robbie, and Emma Stone.
               </p>
               <div className="mt-4 flex items-center text-xs font-semibold text-indigo-400 gap-1 group-hover:translate-x-1 transition-transform">
-                <span>View {hollywoodStars.filter((c) => c.role === 'Heroine').length} Heroines</span>
+                <span>View {hollywoodStars.filter((c) => c.role === 'Actress').length} Actresses</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </div>
             </Link>

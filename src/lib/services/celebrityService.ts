@@ -1,7 +1,14 @@
 import { Celebrity } from '@/types';
 import { initialCelebrities } from '@/data/initialCelebrities';
 
-const STORAGE_KEY = 'cinestars_celebrities_v1';
+const STORAGE_KEY = 'cinestars_celebrities_v2';
+
+function normalizeCelebrity(c: any): Celebrity {
+  let role = c.role;
+  if (role === 'Hero') role = 'Actor';
+  if (role === 'Heroine') role = 'Actress';
+  return { ...c, role };
+}
 
 function getStoredCelebrities(): Celebrity[] {
   if (typeof window === 'undefined') {
@@ -14,7 +21,10 @@ function getStoredCelebrities(): Celebrity[] {
       return initialCelebrities;
     }
     const parsed = JSON.parse(raw);
-    return Array.isArray(parsed) && parsed.length > 0 ? parsed : initialCelebrities;
+    if (Array.isArray(parsed) && parsed.length > 0) {
+      return parsed.map(normalizeCelebrity);
+    }
+    return initialCelebrities;
   } catch (error) {
     console.error('Failed to read celebrities from localStorage:', error);
     return initialCelebrities;

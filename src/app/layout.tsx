@@ -8,7 +8,7 @@ import { Footer } from '@/components/layout/Footer';
 export const metadata: Metadata = {
   title: 'CineStars | Bollywood & Hollywood Stars & Filmography Hub',
   description:
-    'Comprehensive encyclopedia of Bollywood & Hollywood heroes and heroines, complete movie filmographies, box office verdicts, awards, and real-time management dashboard.',
+    'Comprehensive encyclopedia of Bollywood & Hollywood actors and actresses, complete movie filmographies, box office verdicts, awards, and real-time management dashboard.',
 };
 
 export default function RootLayout({

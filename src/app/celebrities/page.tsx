@@ -36,8 +36,12 @@ function CelebritiesContent() {
     if (urlIndustry === 'Bollywood' || urlIndustry === 'Hollywood') {
       setSelectedIndustry(urlIndustry);
     }
-    if (urlRole === 'Hero' || urlRole === 'Heroine') {
+    if (urlRole === 'Actor' || urlRole === 'Actress') {
       setSelectedRole(urlRole);
+    } else if (urlRole === 'Hero') {
+      setSelectedRole('Actor');
+    } else if (urlRole === 'Heroine') {
+      setSelectedRole('Actress');
     }
   }, [searchParams]);
 
@@ -119,7 +123,7 @@ function CelebritiesContent() {
           Celebrity Directory
         </h1>
         <p className="text-slate-400 text-sm sm:text-base mt-2 max-w-2xl">
-          Browse profiles of iconic Bollywood heroes & heroines and Hollywood superstars. Filter by
+          Browse profiles of iconic Bollywood actors & actresses and Hollywood superstars. Filter by
           industry, category, debut era, and award milestones.
         </p>
       </div>
@@ -172,7 +176,7 @@ function CelebritiesContent() {
 
             {/* Role Selector */}
             <div className="flex items-center p-1 bg-[#0b0f19] rounded-xl border border-slate-800 text-xs font-medium">
-              {(['All', 'Hero', 'Heroine'] as const).map((r) => (
+              {(['All', 'Actor', 'Actress'] as const).map((r) => (
                 <button
                   key={r}
                   onClick={() => setSelectedRole(r)}
@@ -182,7 +186,7 @@ function CelebritiesContent() {
                       : 'text-slate-400 hover:text-white'
                   }`}
                 >
-                  {r === 'All' ? 'All Roles' : `${r}es`}
+                  {r === 'All' ? 'All Roles' : r === 'Actor' ? 'Actors' : 'Actresses'}
                 </button>
               ))}
             </div>

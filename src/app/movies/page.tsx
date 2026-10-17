@@ -92,7 +92,7 @@ export default function MoviesPage() {
         </h1>
         <p className="text-slate-400 text-sm sm:text-base mt-2 max-w-2xl">
           Explore iconic Bollywood and Hollywood cinema blockbusters, runtimes, IMDb ratings, and box
-          office verdicts starring top heroes and heroines.
+          office verdicts starring top actors and actresses.
         </p>
       </div>
 

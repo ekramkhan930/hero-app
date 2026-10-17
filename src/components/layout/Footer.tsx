@@ -31,8 +31,8 @@ export function Footer() {
             </Link>
 
             <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
-              The premier cinema encyclopedia showcasing legendary Bollywood and Hollywood heroes and
-              heroines, full filmographies, box office verdicts, awards, and cinematic trivia.
+              The premier cinema encyclopedia showcasing legendary Bollywood and Hollywood actors and
+              actresses, full filmographies, box office verdicts, awards, and cinematic trivia.
             </p>
 
             <div className="flex items-center gap-2 text-xs text-amber-400/90 bg-amber-500/10 border border-amber-500/20 px-3 py-1.5 rounded-lg w-fit">
@@ -78,23 +78,23 @@ export function Footer() {
             <h4 className="text-xs font-semibold uppercase tracking-wider text-white">Categories</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/celebrities?role=Hero&industry=Bollywood" className="hover:text-amber-400 transition-colors">
-                  Bollywood Heroes
+                <Link href="/celebrities?role=Actor&industry=Bollywood" className="hover:text-amber-400 transition-colors">
+                  Bollywood Actors
                 </Link>
               </li>
               <li>
-                <Link href="/celebrities?role=Heroine&industry=Bollywood" className="hover:text-amber-400 transition-colors">
-                  Bollywood Heroines
+                <Link href="/celebrities?role=Actress&industry=Bollywood" className="hover:text-amber-400 transition-colors">
+                  Bollywood Actresses
                 </Link>
               </li>
               <li>
-                <Link href="/celebrities?role=Hero&industry=Hollywood" className="hover:text-amber-400 transition-colors">
-                  Hollywood Heroes
+                <Link href="/celebrities?role=Actor&industry=Hollywood" className="hover:text-amber-400 transition-colors">
+                  Hollywood Actors
                 </Link>
               </li>
               <li>
-                <Link href="/celebrities?role=Heroine&industry=Hollywood" className="hover:text-amber-400 transition-colors">
-                  Hollywood Heroines
+                <Link href="/celebrities?role=Actress&industry=Hollywood" className="hover:text-amber-400 transition-colors">
+                  Hollywood Actresses
                 </Link>
               </li>
               <li>

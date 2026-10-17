@@ -23,7 +23,7 @@ export function CelebrityModal({ isOpen, celebrity, onClose, onSave }: Celebrity
   const [realName, setRealName] = useState('');
   const [slug, setSlug] = useState('');
   const [industry, setIndustry] = useState<Industry>('Bollywood');
-  const [role, setRole] = useState<GenderRole>('Hero');
+  const [role, setRole] = useState<GenderRole>('Actor');
   const [profileImage, setProfileImage] = useState('');
   const [bannerImage, setBannerImage] = useState('');
   const [dob, setDob] = useState('');
@@ -67,7 +67,7 @@ export function CelebrityModal({ isOpen, celebrity, onClose, onSave }: Celebrity
       setRealName(celebrity.realName || '');
       setSlug(celebrity.slug || '');
       setIndustry(celebrity.industry || 'Bollywood');
-      setRole(celebrity.role || 'Hero');
+      setRole(celebrity.role || 'Actor');
       setProfileImage(celebrity.profileImage || '');
       setBannerImage(celebrity.bannerImage || '');
       setDob(celebrity.dob || '');
@@ -94,7 +94,7 @@ export function CelebrityModal({ isOpen, celebrity, onClose, onSave }: Celebrity
       setRealName('');
       setSlug('');
       setIndustry('Bollywood');
-      setRole('Hero');
+      setRole('Actor');
       setProfileImage('https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800');
       setBannerImage('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1600');
       setDob('1990-01-01');
@@ -347,8 +347,8 @@ export function CelebrityModal({ isOpen, celebrity, onClose, onSave }: Celebrity
                     onChange={(e) => setRole(e.target.value as GenderRole)}
                     className="w-full bg-[#0b0f19] text-white px-3.5 py-2.5 rounded-xl border border-slate-700/80 focus:border-amber-500 focus:outline-none text-xs"
                   >
-                    <option value="Hero">Hero (Male Lead)</option>
-                    <option value="Heroine">Heroine (Female Lead)</option>
+                    <option value="Actor">Actor (Male Lead)</option>
+                    <option value="Actress">Actress (Female Lead)</option>
                   </select>
                 </div>
 

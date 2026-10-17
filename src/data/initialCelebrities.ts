@@ -2,7 +2,7 @@ import { Celebrity } from '@/types';
 
 export const initialCelebrities: Celebrity[] = [
   // ==========================================
-  // BOLLYWOOD HEROES
+  // BOLLYWOOD ACTORS
   // ==========================================
   {
     id: 'srk-01',
@@ -10,7 +10,7 @@ export const initialCelebrities: Celebrity[] = [
     name: 'Shah Rukh Khan',
     realName: 'Shahrukh Khan',
     industry: 'Bollywood',
-    role: 'Hero',
+    role: 'Actor',
     profileImage: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&auto=format&fit=crop&q=80',
     bannerImage: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1600&auto=format&fit=crop&q=80',
     galleryImages: [
@@ -114,7 +114,7 @@ export const initialCelebrities: Celebrity[] = [
     name: 'Aamir Khan',
     realName: 'Mohammed Aamir Hussain Khan',
     industry: 'Bollywood',
-    role: 'Hero',
+    role: 'Actor',
     profileImage: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&auto=format&fit=crop&q=80',
     bannerImage: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1600&auto=format&fit=crop&q=80',
     galleryImages: [
@@ -198,7 +198,7 @@ export const initialCelebrities: Celebrity[] = [
     name: 'Hrithik Roshan',
     realName: 'Hrithik Rakesh Roshan',
     industry: 'Bollywood',
-    role: 'Hero',
+    role: 'Actor',
     profileImage: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&auto=format&fit=crop&q=80',
     bannerImage: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=1600&auto=format&fit=crop&q=80',
     galleryImages: [
@@ -284,7 +284,7 @@ export const initialCelebrities: Celebrity[] = [
     name: 'Amitabh Bachchan',
     realName: 'Amitabh Shrivastav',
     industry: 'Bollywood',
-    role: 'Hero',
+    role: 'Actor',
     profileImage: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&auto=format&fit=crop&q=80',
     bannerImage: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1600&auto=format&fit=crop&q=80',
     galleryImages: [
@@ -357,14 +357,14 @@ export const initialCelebrities: Celebrity[] = [
   },
 
   // ==========================================
-  // BOLLYWOOD HEROINES
+  // BOLLYWOOD ACTRESSES
   // ==========================================
   {
     id: 'deepika-05',
     slug: 'deepika-padukone',
     name: 'Deepika Padukone',
     industry: 'Bollywood',
-    role: 'Heroine',
+    role: 'Actress',
     profileImage: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&auto=format&fit=crop&q=80',
     bannerImage: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1600&auto=format&fit=crop&q=80',
     galleryImages: [
@@ -451,7 +451,7 @@ export const initialCelebrities: Celebrity[] = [
     slug: 'alia-bhatt',
     name: 'Alia Bhatt',
     industry: 'Bollywood',
-    role: 'Heroine',
+    role: 'Actress',
     profileImage: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800&auto=format&fit=crop&q=80',
     bannerImage: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=1600&auto=format&fit=crop&q=80',
     galleryImages: [
@@ -528,7 +528,7 @@ export const initialCelebrities: Celebrity[] = [
     slug: 'priyanka-chopra',
     name: 'Priyanka Chopra Jonas',
     industry: 'Bollywood',
-    role: 'Heroine',
+    role: 'Actress',
     profileImage: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800&auto=format&fit=crop&q=80',
     bannerImage: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1600&auto=format&fit=crop&q=80',
     galleryImages: [
@@ -599,7 +599,7 @@ export const initialCelebrities: Celebrity[] = [
   },
 
   // ==========================================
-  // HOLLYWOOD HEROES
+  // HOLLYWOOD ACTORS
   // ==========================================
   {
     id: 'leo-08',
@@ -607,7 +607,7 @@ export const initialCelebrities: Celebrity[] = [
     name: 'Leonardo DiCaprio',
     realName: 'Leonardo Wilhelm DiCaprio',
     industry: 'Hollywood',
-    role: 'Hero',
+    role: 'Actor',
     profileImage: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&auto=format&fit=crop&q=80',
     bannerImage: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1600&auto=format&fit=crop&q=80',
     galleryImages: [
@@ -695,7 +695,7 @@ export const initialCelebrities: Celebrity[] = [
     name: 'Robert Downey Jr.',
     realName: 'Robert John Downey Jr.',
     industry: 'Hollywood',
-    role: 'Hero',
+    role: 'Actor',
     profileImage: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&auto=format&fit=crop&q=80',
     bannerImage: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=1600&auto=format&fit=crop&q=80',
     galleryImages: [
@@ -771,7 +771,7 @@ export const initialCelebrities: Celebrity[] = [
     name: 'Tom Cruise',
     realName: 'Thomas Cruise Mapother IV',
     industry: 'Hollywood',
-    role: 'Hero',
+    role: 'Actor',
     profileImage: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&auto=format&fit=crop&q=80',
     bannerImage: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1600&auto=format&fit=crop&q=80',
     galleryImages: [
@@ -831,7 +831,7 @@ export const initialCelebrities: Celebrity[] = [
   },
 
   // ==========================================
-  // HOLLYWOOD HEROINES
+  // HOLLYWOOD ACTRESSES
   // ==========================================
   {
     id: 'scarlett-11',
@@ -839,7 +839,7 @@ export const initialCelebrities: Celebrity[] = [
     name: 'Scarlett Johansson',
     realName: 'Scarlett Ingrid Johansson',
     industry: 'Hollywood',
-    role: 'Heroine',
+    role: 'Actress',
     profileImage: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&auto=format&fit=crop&q=80',
     bannerImage: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1600&auto=format&fit=crop&q=80',
     galleryImages: [
@@ -913,7 +913,7 @@ export const initialCelebrities: Celebrity[] = [
     name: 'Margot Robbie',
     realName: 'Margot Elise Robbie',
     industry: 'Hollywood',
-    role: 'Heroine',
+    role: 'Actress',
     profileImage: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&auto=format&fit=crop&q=80',
     bannerImage: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=1600&auto=format&fit=crop&q=80',
     galleryImages: [
@@ -986,7 +986,7 @@ export const initialCelebrities: Celebrity[] = [
     name: 'Emma Stone',
     realName: 'Emily Jean Stone',
     industry: 'Hollywood',
-    role: 'Heroine',
+    role: 'Actress',
     profileImage: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800&auto=format&fit=crop&q=80',
     bannerImage: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1600&auto=format&fit=crop&q=80',
     galleryImages: [

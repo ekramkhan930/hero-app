@@ -232,7 +232,7 @@ export default function MovieDetailPage() {
             <div className="p-6 sm:p-8 rounded-2xl glass-panel border border-slate-800 space-y-4">
               <h3 className="text-xl font-bold text-white flex items-center gap-2">
                 <Users className="w-5 h-5 text-amber-400" />
-                <span>Lead Heroes, Heroines & Cast</span>
+                <span>Lead Actors, Actresses & Cast</span>
               </h3>
               <p className="text-xs text-slate-400">
                 Click on any celebrity to view their full biography, awards, and complete movie list.

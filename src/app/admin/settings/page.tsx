@@ -59,7 +59,7 @@ CREATE TABLE celebrities (
     name VARCHAR(255) NOT NULL,
     real_name VARCHAR(255),
     industry VARCHAR(32) NOT NULL, -- 'Bollywood' | 'Hollywood'
-    role VARCHAR(32) NOT NULL,     -- 'Hero' | 'Heroine'
+    role VARCHAR(32) NOT NULL,     -- 'Actor' | 'Actress'
     profile_image TEXT NOT NULL,
     banner_image TEXT,
     gallery_images TEXT[],

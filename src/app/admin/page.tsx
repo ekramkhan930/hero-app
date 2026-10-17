@@ -44,8 +44,8 @@ export default function AdminDashboardPage() {
   const bollywoodCelebs = celebrities.filter((c) => c.industry === 'Bollywood');
   const hollywoodCelebs = celebrities.filter((c) => c.industry === 'Hollywood');
 
-  const heroesCount = celebrities.filter((c) => c.role === 'Hero').length;
-  const heroinesCount = celebrities.filter((c) => c.role === 'Heroine').length;
+  const actorsCount = celebrities.filter((c) => c.role === 'Actor').length;
+  const actressesCount = celebrities.filter((c) => c.role === 'Actress').length;
 
   const totalAwardsCount = celebrities.reduce((acc, c) => acc + c.awards.length, 0);
 
@@ -72,7 +72,7 @@ export default function AdminDashboardPage() {
             Cinema Management Dashboard
           </h1>
           <p className="text-slate-400 text-xs sm:text-sm mt-1">
-            Real-time catalog oversight for Bollywood & Hollywood heroes, heroines, and filmographies.
+            Real-time catalog oversight for Bollywood & Hollywood actors, actresses, and filmographies.
           </p>
         </div>
 
@@ -109,9 +109,9 @@ export default function AdminDashboardPage() {
           </div>
           <div className="text-3xl font-black text-white">{celebrities.length}</div>
           <div className="text-[11px] text-slate-400 flex items-center justify-between">
-            <span>{heroesCount} Heroes</span>
+            <span>{actorsCount} Actors</span>
             <span>•</span>
-            <span>{heroinesCount} Heroines</span>
+            <span>{actressesCount} Actresses</span>
           </div>
         </div>
 

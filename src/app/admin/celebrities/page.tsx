@@ -101,7 +101,7 @@ export default function AdminCelebritiesPage() {
             <span>Manage Celebrities</span>
           </h1>
           <p className="text-xs sm:text-sm text-slate-400 mt-1">
-            Create, modify, and delete Bollywood & Hollywood heroes and heroines records.
+            Create, modify, and delete Bollywood & Hollywood actors and actresses records.
           </p>
         </div>
 
@@ -161,7 +161,7 @@ export default function AdminCelebritiesPage() {
 
           {/* Role Filter */}
           <div className="flex items-center p-1 bg-[#0b0f19] rounded-xl border border-slate-800 text-xs font-medium">
-            {(['All', 'Hero', 'Heroine'] as const).map((r) => (
+            {(['All', 'Actor', 'Actress'] as const).map((r) => (
               <button
                 key={r}
                 onClick={() => setRoleFilter(r)}
@@ -171,7 +171,7 @@ export default function AdminCelebritiesPage() {
                     : 'text-slate-400 hover:text-white'
                 }`}
               >
-                {r === 'All' ? 'All Roles' : `${r}es`}
+                {r === 'All' ? 'All Roles' : r === 'Actor' ? 'Actors' : 'Actresses'}
               </button>
             ))}
           </div>

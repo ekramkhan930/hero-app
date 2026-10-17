@@ -1,5 +1,5 @@
 export type Industry = 'Bollywood' | 'Hollywood';
-export type GenderRole = 'Hero' | 'Heroine';
+export type GenderRole = 'Actor' | 'Actress';
 
 export type BoxOfficeVerdict =
   | 'All-Time Blockbuster'
