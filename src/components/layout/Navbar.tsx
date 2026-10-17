@@ -24,8 +24,10 @@ export function Navbar() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // If in admin layout, we can let admin pages have their own focused top bar or keep universal navbar
-  const isAdminSection = pathname.startsWith('/admin') && pathname !== '/admin/login';
+  // Hide public navbar on all admin routes
+  if (pathname.startsWith('/admin')) {
+    return null;
+  }
 
   const navLinks = [
     { label: 'Home', href: '/' },

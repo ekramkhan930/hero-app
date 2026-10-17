@@ -10,12 +10,15 @@ import {
   Settings,
   LogOut,
   ExternalLink,
-  ShieldCheck,
-  Sparkles,
+  X,
 } from 'lucide-react';
 import { useAuth } from '@/lib/context/AuthContext';
 
-export function AdminSidebar() {
+interface AdminSidebarProps {
+  onCloseMobile?: () => void;
+}
+
+export function AdminSidebar({ onCloseMobile }: AdminSidebarProps) {
   const pathname = usePathname();
   const router = useRouter();
   const { user, logout } = useAuth();
@@ -38,11 +41,11 @@ export function AdminSidebar() {
   };
 
   return (
-    <aside className="w-64 bg-[#0a0e17] border-r border-slate-800/80 flex flex-col shrink-0 min-h-screen">
+    <aside className="w-64 bg-[#0a0e17] border-r border-slate-800/80 flex flex-col shrink-0 h-screen sticky top-0 z-30">
       {/* Brand Header */}
-      <div className="p-5 border-b border-slate-800 flex items-center justify-between">
-        <Link href="/admin" className="flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-amber-500 to-amber-600 flex items-center justify-center text-black font-black text-sm">
+      <div className="p-5 border-b border-slate-800 flex items-center justify-between shrink-0 bg-[#0a0e17]">
+        <Link href="/admin" onClick={onCloseMobile} className="flex items-center gap-2.5">
+          <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-amber-500 to-amber-600 flex items-center justify-center text-black font-black text-sm shadow-md shadow-amber-500/20">
             C
           </div>
           <div className="flex flex-col">
@@ -52,10 +55,19 @@ export function AdminSidebar() {
             </span>
           </div>
         </Link>
+
+        {onCloseMobile && (
+          <button
+            onClick={onCloseMobile}
+            className="md:hidden p-1.5 text-slate-400 hover:text-white rounded-lg"
+          >
+            <X className="w-4 h-4" />
+          </button>
+        )}
       </div>
 
-      {/* Navigation */}
-      <nav className="p-4 space-y-1.5 flex-1">
+      {/* Navigation (Scrollable in case viewport is short) */}
+      <nav className="p-4 space-y-1.5 flex-1 overflow-y-auto">
         <div className="text-[10px] font-bold uppercase tracking-wider text-slate-500 px-3 py-2">
           Management
         </div>
@@ -67,6 +79,7 @@ export function AdminSidebar() {
             <Link
               key={item.href}
               href={item.href}
+              onClick={onCloseMobile}
               className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-xs font-semibold transition-all ${
                 active
                   ? 'bg-amber-500 text-black shadow-md shadow-amber-500/10'
@@ -85,6 +98,7 @@ export function AdminSidebar() {
           </div>
           <Link
             href="/"
+            onClick={onCloseMobile}
             className="flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-medium text-slate-400 hover:text-white hover:bg-slate-900 transition-colors"
           >
             <span className="flex items-center gap-3">
@@ -95,8 +109,8 @@ export function AdminSidebar() {
         </div>
       </nav>
 
-      {/* User Info & Logout */}
-      <div className="p-4 border-t border-slate-800/80 bg-slate-950/60">
+      {/* User Info & Logout (Permanently pinned at the bottom of the sidebar) */}
+      <div className="p-4 border-t border-slate-800/80 bg-[#070a12] shrink-0 mt-auto shadow-lg">
         <div className="flex items-center gap-3 mb-3">
           <div className="w-9 h-9 rounded-full bg-slate-800 border border-slate-700 overflow-hidden shrink-0">
             <img
@@ -113,9 +127,9 @@ export function AdminSidebar() {
 
         <button
           onClick={handleLogout}
-          className="w-full flex items-center justify-center gap-2 px-3 py-2 rounded-xl bg-slate-900 hover:bg-rose-500/20 text-slate-400 hover:text-rose-400 border border-slate-800 hover:border-rose-500/30 text-xs font-semibold transition-all"
+          className="w-full flex items-center justify-center gap-2 px-3 py-2 rounded-xl bg-slate-900 hover:bg-rose-500/20 text-slate-300 hover:text-rose-400 border border-slate-800 hover:border-rose-500/30 text-xs font-semibold transition-all shadow"
         >
-          <LogOut className="w-3.5 h-3.5" />
+          <LogOut className="w-3.5 h-3.5 text-rose-400" />
           <span>Sign Out</span>
         </button>
       </div>

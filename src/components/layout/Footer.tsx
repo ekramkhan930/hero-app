@@ -1,8 +1,18 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
-import { Film, Heart, Shield, Sparkles, ExternalLink } from 'lucide-react';
+import { usePathname } from 'next/navigation';
+import { Film, Heart, Shield, Sparkles } from 'lucide-react';
 
 export function Footer() {
+  const pathname = usePathname();
+
+  // Hide public footer in admin dashboard
+  if (pathname.startsWith('/admin')) {
+    return null;
+  }
+
   return (
     <footer className="w-full bg-[#05070a] border-t border-slate-900 text-slate-400 mt-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
